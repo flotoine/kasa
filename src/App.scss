@@ -3,10 +3,13 @@
 
 body {
     font-family:  'Montserrat';
-    margin:20px;
+    margin: 0;
 }
 
+// Header rules
+
 .navbar {
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,5 +27,16 @@ body {
     &__logo {
         width: calc(50px + 5vw);
     }
+}
+
+
+// Footer rules
+.footer {
+    background-color: black;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
 }
 
