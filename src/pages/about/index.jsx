@@ -1,8 +1,12 @@
+import Banner from "../../components/Banner"
+import Collapse from "../../components/Collapse"
+
 export default function About () {
     return (
         <div>
-            <img src="" alt="bandeau paysage montagneux"></img>
+            <Banner />
             <ul>
+                <Collapse />
                 <li>Fiabilité</li>
                 <li>Respect</li>
                 <li>Service</li>

@@ -30,17 +30,51 @@ body {
 }
 
 // Banner rules
-.home-banner {
-    padding: 30px;
-    text-align: center;
-    color: white;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./assets/bckgrn1.webp");
+.banner {
     background-size: cover;
     background-position: center;
     margin-left: 30px;
     margin-right: 30px;
     border-radius: 20px;
-    font-size: calc(1vw + 5px);
+    height: calc(15vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width:600px)  {
+        justify-content: flex-start;
+        padding-left: 15px;
+        
+    }
+
+    &__text {
+        margin: 0;
+        padding: 0px;
+        color: white;
+        font-size: calc(3vw + 1px);
+    }
+
+    &__about {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./assets/bckgrn2.webp");
+        &__text {
+            display: none;
+        }
+    }
+
+    &__home {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./assets/bckgrn1.webp");
+        &__text {
+            &--break {
+                display: none;
+            }
+            @media (max-width:600px)  {
+                &--break {
+                    display: inline;
+                }
+            }
+        }
+    }
+ 
 }
 
 // Cards rules
@@ -69,12 +103,7 @@ body {
     border-radius: 20px;
     background-size: cover;
     background-position: center;
-    
-
-    &:before{
-        background: linear-gradient(#ffffff00, #000000);
-    }
-
+   
     @media (max-width: 600px) {
         flex: 1 1 100%;
     }
@@ -93,7 +122,43 @@ body {
 
 
 
+// Collapse rules 
 
+.collapseWrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FAFAFA;
+
+    &__top {
+        width: 100%;
+        background-color: #EF6159;
+        color:white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__arrow {
+            width: 4%;
+            filter:invert(100%);
+        }
+    }
+
+}
+
+// 404 rules
+
+.error-page {
+
+    &__404 {
+        color:#DF5B53;
+        font-size: 200px;
+    }
+
+    &__subtext {
+        color:#DF5B53;
+    }
+}
 
 
 // Footer rules
