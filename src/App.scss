@@ -60,13 +60,13 @@ body {
 }
 
 .card {
-    flex: 1 1 auto;
-    width: calc(20vw + 100px);
+
+    flex: 1 1 30%;
     aspect-ratio: 1/1;
     background-color: red;
     border-radius: 20px;
     @media (max-width: 600px) {
-        width: 100%
+        flex: 1 1 100%;
     }
 
     
