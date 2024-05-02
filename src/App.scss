@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 body {
     font-family:  'Montserrat';
     margin: 0;
@@ -44,6 +45,8 @@ body {
 
 // Cards rules
 .cards {
+    
+    
     display: flex;
     flex-wrap: wrap;
     margin: 30px;
@@ -60,17 +63,35 @@ body {
 }
 
 .card {
-
+    display: flex;
     flex: 1 1 30%;
     aspect-ratio: 1/1;
-    background-color: red;
     border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    
+
+    &:before{
+        background: linear-gradient(#ffffff00, #000000);
+    }
+
     @media (max-width: 600px) {
         flex: 1 1 100%;
     }
 
+
+
+    &__text {
+        color:white;
+        align-content: flex-end;
+        font-weight: bold;
+        padding: 0px 20px 0px 20px;
+        
+    }
     
 }
+
+
 
 
 
