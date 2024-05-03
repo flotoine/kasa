@@ -1,0 +1,45 @@
+// Banner rules
+.banner {
+    background-size: cover;
+    background-position: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 20px;
+    height: calc(15vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width:600px)  {
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+
+    &__text {
+        margin: 0;
+        padding: 0px;
+        color: white;
+        font-size: calc(3vw + 1px);
+    }
+
+    &__about {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../assets/bckgrn2.webp");
+        &__text {
+            display: none;
+        }
+    }
+
+    &__home {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../assets/bckgrn1.webp");
+        &__text {
+            &--break {
+                display: none;
+            }
+            @media (max-width:600px)  {
+                &--break {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

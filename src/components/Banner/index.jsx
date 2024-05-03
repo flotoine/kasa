@@ -1,3 +1,6 @@
+import './Banner.scss'
+
+
 export default function Banner () {
     let className = "";
     (window.location.href.includes('a-propos')) ? 

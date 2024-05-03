@@ -1,5 +1,5 @@
 import unrollArrow from "../../assets/chevron-up-solid.svg"
-
+import "./Collapse.scss"
 
 export default function Collapse () {
     return (

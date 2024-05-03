@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom'
-import kasaLogo from '../../assets/kasa-logo.svg'
+import { Link } from 'react-router-dom';
+import './Header.scss';
+import kasaLogo from '../../assets/kasa-logo.svg';
+
 
 export default function Header () {
     return (

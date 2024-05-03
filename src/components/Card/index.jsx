@@ -1,4 +1,5 @@
 import adList from "../../database/logements.json"
+import "./Card.scss"
 
 export default function Card () {
     return (

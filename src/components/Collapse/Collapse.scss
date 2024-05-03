@@ -1,0 +1,22 @@
+// Collapse rules 
+
+.collapseWrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FAFAFA;
+
+    &__top {
+        width: 100%;
+        background-color: #EF6159;
+        color:white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__arrow {
+            width: 4%;
+            filter:invert(100%);
+        }
+    }
+}

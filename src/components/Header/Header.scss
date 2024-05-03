@@ -1,0 +1,22 @@
+// Header rules
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__navlinks > * {
+        margin-left: 50px;
+        text-decoration: none;
+        color: black;
+        &:focus {
+            text-decoration: underline;
+        }
+        @media (max-width:600px) {
+            text-transform: uppercase;
+        }
+    }
+    &__logo {
+        width: calc(50px + 5vw);
+    }
+}
