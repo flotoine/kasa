@@ -81,8 +81,8 @@ body {
 .cards {
     
     
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin: 30px;
     gap: 30px;
     background-color: #F5F5F5;
@@ -97,19 +97,12 @@ body {
 }
 
 .card {
-    display: flex;
-    flex: 1 1 30%;
+   
     aspect-ratio: 1/1;
     border-radius: 20px;
     background-size: cover;
     background-position: center;
    
-    @media (max-width: 600px) {
-        flex: 1 1 100%;
-    }
-
-
-
     &__text {
         color:white;
         align-content: flex-end;
