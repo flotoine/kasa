@@ -1,19 +1,18 @@
 import unrollArrow from "../../assets/chevron-up-solid.svg"
 import "./Collapse.scss"
 
-export default function Collapse () {
+export default function Collapse ({title, content}) {
     return (
-        
-        <div className="collapseWrapper">
-            <div className="collapseWrapper__top">
-                <div className="collapseWrapper__top__title"> 
-                Fiabilité
+            <div className="collapseWrapper"> 
+                <div className="collapseWrapper__top">
+                    <div className="collapseWrapper__top__title"> 
+                    {title}
+                    </div>
+                    <img className="collapseWrapper__top__arrow" src={unrollArrow} alt="bouton dérouler" />
+                </div >
+                <div className="collapseWrapper__textContainer">
+                <p>{content}</p>
                 </div>
-                <img className="collapseWrapper__top__arrow" src={unrollArrow} alt="dérouler" />
-            </div >
-            <div className="collapseWrapper__textContainer">
-                <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
             </div>
-        </div>
     )
 }
