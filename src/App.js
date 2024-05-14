@@ -6,13 +6,14 @@ import Footer from "./components/Footer";
 
 import ErrorPage from "./pages/error-page";
 import About from "./pages/about";
-import Accommodation from "./pages/accommodation";
+import Offer from "./pages/offer";
 import Home from "./pages/home";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>
+    element: <div className="pageContainer">
               <Header />
               <Home />
               <Footer />
@@ -21,17 +22,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/a-propos",
-    element: <div>
+    element: <div className="pageContainer">
               <Header />
               <About />
               <Footer />
-            </div>,
+            </div >,
   },
   {
-    path: "/logement",
-    element: <div>
-               <Header />
-                <Accommodation />
+    path: "/logement/:offerId",
+    element: <div className="pageContainer">
+                <Header />
+                <Offer />
                 <Footer />
              </div>
   }

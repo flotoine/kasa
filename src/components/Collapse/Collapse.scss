@@ -49,7 +49,7 @@
         padding-right: 1%;
         background-color: #FAFAFA;
         height:0;
-        overflow: hidden;
+        overflow: hidden;  /// faire glisser le texte aussi
 
         &--closed {
             animation: slideClose 1s ease-in-out;

@@ -1,13 +1,30 @@
 // 404 rules
 
 .error-page {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
 
     &__404 {
         color:#DF5B53;
-        font-size: 200px;
+        font-size: calc(20vw);
+        margin-top: 20px;
+        margin-bottom: 0;
     }
 
     &__subtext {
         color:#DF5B53;
+        font-weight: 300;
+        font-size: calc(1vw + 10px);
+        margin-bottom: 100px;
+    }
+
+    &__backlink {
+        margin-bottom: 80px;
+        font-size: calc(1vw + 5px);
+
+        & > * {
+        color: black;
+        }
     }
 }

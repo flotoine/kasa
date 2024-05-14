@@ -11,12 +11,12 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div>
+    <div className="pageContainer">
       <Header/>
-      <div id="error-page">
+      <div className="error-page">
         <h1 className="error-page__404">404</h1>
         <h2 className="error-page__subtext">Oups! La page que vous demandez n'existe pas.</h2>
-        <Link to='/'>Retour sur la page d'acceuil</Link>
+        <div className="error-page__backlink"><Link to='/'>Retourner sur la page d'acceuil</Link></div>
       </div>
       <Footer/>
     </div>
