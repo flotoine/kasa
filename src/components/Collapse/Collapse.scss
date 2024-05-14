@@ -1,10 +1,22 @@
 // Collapse rules 
+@keyframes slideOpen {
+    from {max-height: 0;}
+    to {max-height: 150px;}
+}
+
+@keyframes slideClose {
+    from {max-height: 150px;}
+    to {max-height: 0px;}
+}
 
 .collapseWrapper {
     width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
 
     &__top {
         width: 100%;
@@ -13,10 +25,42 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-radius: 2px;
+        padding-left: 1%;
+        padding-right: 1%;
+        height:30px;
+        animation-fill-mode: forwards;
 
         &__arrow {
-            width: 4%;
+            height:50%;
             filter:invert(100%);
+            transition: transform 200ms ease-in-out ;
+            
+            &--open{
+                transform: rotate(-180deg);
+                transition: transform 200ms ease-in-out ;
+            }
+        }
+    }
+
+    &__textContainer {
+        width: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+        background-color: #FAFAFA;
+        height:0;
+        overflow: hidden;
+
+        &--closed {
+            animation: slideClose 1s ease-in-out;
+            animation-fill-mode: forwards;
+            height:auto;
+        }
+
+        &--open {
+            animation: slideOpen 1s ease-in-out;
+            animation-fill-mode: forwards;
+            height:auto;
         }
     }
 }
