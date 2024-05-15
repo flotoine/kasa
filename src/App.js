@@ -18,7 +18,11 @@ const router = createBrowserRouter([
               <Home />
               <Footer />
             </div>,
-    errorElement: <ErrorPage />
+    errorElement: <div className="pageContainer">
+              <Header />
+              <ErrorPage />
+              <Footer />
+            </div>,
   },
   {
     path: "/a-propos",

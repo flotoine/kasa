@@ -20,6 +20,7 @@
     background-size: cover;
     background-position: center;
     display: flex;
+    text-decoration: none;
    
     &__text {
         display: flex;
@@ -27,5 +28,6 @@
         color:white;
         font-weight: bold;
         padding: 0px 20px 0px 20px; 
+       
     }  
 }

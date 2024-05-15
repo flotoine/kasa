@@ -1,27 +1,33 @@
 import { useParams } from "react-router-dom"
-import offer from "../../database/logements.json"
-
+import adList from "../../database/logements.json"
+import ErrorPage from "../error-page";
 
 export default function Offer () {
     let { offerId } = useParams();
-    console.log(offerId);
+    let adExists = (adList.map((ad) => (ad.id))).includes(offerId)
 
-    console.log(offer[1])
     return (
         <div>
-            <img src={offer[1].pictures[1]} alt = "logement"></img>
-            <h1>{offer[1].title}</h1>
-            <p>{offer[1].location}</p>
-            <div>{offer[1].equipments}</div>
-            <div>{offer[1].host.name}</div>
-            <img src={offer[1].host.picture} alt ="propriétaire"/>
-            <div>{offer[1].rating}</div>
-            <div>
-                {offer[1].description}
-            </div>
-            <div>
-                 {offer[1].tags}
-            </div>
+            {adExists ? (
+                adList.map((ad) => (ad.id === offerId ? 
+                    <div>
+                                <img src={ad.pictures[1]} alt = "logement"></img>
+                                <h1>{ad.title}</h1>
+                                <p>{ad.location}</p>
+                                <div>{ad.equipments}</div>
+                                <div>{ad.host.name}</div>
+                                <img src={ad.host.picture} alt ="propriétaire"/>
+                                <div>{ad.rating}</div>
+                                <div>
+                                    {ad.description}
+                                </div>
+                                <div>
+                                    {ad.tags}
+                                </div>
+                    </div>
+                    :null))
+                ) : 
+                (ErrorPage())}
         </div>
     )
 }
