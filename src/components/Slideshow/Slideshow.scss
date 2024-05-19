@@ -1,0 +1,16 @@
+.slideshow-container {
+    &__picture {
+        &--displayed {
+            color:red;
+        }
+
+        &--hidden {
+            display:none;
+        }
+    }
+
+    &__button {
+        height : 10px;
+        width: 10px;
+    }
+}

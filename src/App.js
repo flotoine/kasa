@@ -24,6 +24,7 @@ const router = createBrowserRouter([
               <Footer />
             </div>,
   },
+  // créer un path avec * à la fin
   {
     path: "/a-propos",
     element: <div className="pageContainer">

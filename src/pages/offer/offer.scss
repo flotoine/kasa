@@ -1,0 +1,25 @@
+.offer {
+    &__info {
+
+        &__title {
+            color:#EF6159;
+            font-weight:400;
+        }
+
+        &__hostname {
+            color:#EF6159;
+        }
+
+        &__hostpic {
+            height:100px;
+            width:100px;
+            border-radius: 100%;
+            overflow: hidden;
+            
+            img {
+               width: 100%;              
+            }
+        }
+    
+    }
+}
