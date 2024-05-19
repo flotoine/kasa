@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom"
 import adList from "../../database/logements.json"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
-import ErrorPage from "../error-page";
 import Collapse from "../../components/Collapse";
 import Slideshow from "../../components/Slideshow";
 import StarRating from "../../components/StarRating";
