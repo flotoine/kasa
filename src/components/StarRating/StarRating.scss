@@ -1,0 +1,11 @@
+.star{
+    display: flex;
+    width: 100px;
+    &__gray {
+        filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(82%);
+    }
+    &__colored {
+        filter: invert(17%) sepia(77%) saturate(7255%) hue-rotate(357deg) brightness(95%) contrast(116%);
+    }  
+}
+
