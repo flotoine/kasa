@@ -13,33 +13,20 @@ import Home from "./pages/home";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div className="pageContainer">
-              <Header />
-              <Home />
-              <Footer />
-            </div>,
-    errorElement: <div className="pageContainer">
-              <Header />
-              <ErrorPage />
-              <Footer />
-            </div>,
+    element: <Home />,
+    errorElement: <ErrorPage />
   },
-  // créer un path avec * à la fin
   {
     path: "/a-propos",
-    element: <div className="pageContainer">
-              <Header />
-              <About />
-              <Footer />
-            </div >,
+    element: <About />
   },
   {
     path: "/logement/:offerId",
-    element: <div className="pageContainer">
-                <Header />
-                <Offer />
-                <Footer />
-             </div>
+    element:  <Offer />
+  },
+  {
+    path: "*",
+    element: <ErrorPage />
   }
 
 

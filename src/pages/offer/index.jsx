@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom"
 import adList from "../../database/logements.json"
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
 import ErrorPage from "../error-page";
 import Collapse from "../../components/Collapse";
 import Slideshow from "../../components/Slideshow";
@@ -13,7 +15,8 @@ export default function Offer () {
     let adExists = (adList.map((ad) => (ad.id))).includes(offerId)
 
     return (
-        <div>
+        <div className="pageContainer">
+            <Header />
             {adExists ? (
                 adList.map((ad) => (ad.id === offerId ? 
                     <div key={ad.id} className="offer">
@@ -59,7 +62,8 @@ export default function Offer () {
                     </div>
                     :null))
                 ) : 
-                (ErrorPage())}
+                window.location.href = "/logement-non-trouve"}
+            <Footer />
         </div>
     )
 }

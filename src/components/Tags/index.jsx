@@ -1,7 +1,6 @@
 import './Tags.scss'
 
 export default function Tags ({tags}) {
-    console.log(tags)
     return (
         <div className="tags">
             {tags.map((tag) => (

@@ -1,10 +1,13 @@
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
 import Banner from "../../components/Banner"
 import Collapse from "../../components/Collapse"
 import aboutList from "../../database/about.json"
 
 export default function About () {
     return (
-        <div>
+        <div className="pageContainer">
+            <Header />
             <Banner />
             {aboutList.map((aboutItem) => 
                 <div key ={aboutItem.id}>
@@ -14,6 +17,7 @@ export default function About () {
                     />
                 </div>
             )}
+            <Footer />
         </div>
     )
 }
