@@ -39,7 +39,12 @@ function PreviousSlide () {
 export default function Slideshow ({pictures}) {
     return (
     <div className="slideshow-container">
-        {pictures.map((picture, index) => (index===0) ? (
+        {pictures.map((picture, index) => (pictures.length === 1) ? (
+            <div key={index} className="slideshow-container__picture--displayed" id={`picture-${index}`}>
+                <img src={picture} alt="logement"/>
+            </div>
+        ) :
+        (index===0) ? (
             <div key={index} className="slideshow-container__picture--displayed" id={`picture-${index}`}>
                 <img src={picture} alt="logement"/>
                 <div className="slideshow-container__picture__subtext">{index+1}/{pictures.length}</div>
@@ -53,9 +58,10 @@ export default function Slideshow ({pictures}) {
         )
         
         )}
+        {(pictures.length > 1) ? (
         <div className="slideshow-container__buttons">
             <img className="slideshow-container__button" src={left} alt="bonton précédent" onClick={PreviousSlide}/>
             <img className="slideshow-container__button" src={right} alt="bouton suivant" onClick={NextSlide}/>
-        </div>
+        </div>): null}
     </div>)
 }

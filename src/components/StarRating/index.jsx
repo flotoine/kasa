@@ -19,5 +19,3 @@ export default function StarRating ({rating}) {
         </div>
     ) 
 }
-
-//travailler le join
