@@ -4,6 +4,7 @@ import ErrorPage from "../error-page";
 import Collapse from "../../components/Collapse";
 import Slideshow from "../../components/Slideshow";
 import StarRating from "../../components/StarRating";
+import Tags from "../../components/Tags";
 
 import "./offer.scss"
 
@@ -36,7 +37,9 @@ export default function Offer () {
                                     </div>
                                     
                                     <div>
-                                        {ad.tags}
+                                        <Tags
+                                            tags = {ad.tags}
+                                        />
                                     </div>
                                 </div>
                                 <div className="offer__collapses">

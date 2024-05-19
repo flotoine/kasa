@@ -1,0 +1,9 @@
+.tags {
+    display: flex;
+    gap:10px;
+    &__items {
+        background-color: red;
+        color:white;
+    }
+}
+
