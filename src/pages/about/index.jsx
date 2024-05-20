@@ -9,14 +9,16 @@ export default function About () {
         <div className="pageContainer">
             <Header />
             <Banner />
-            {aboutList.map((aboutItem) => 
-                <div key ={aboutItem.id}>
-                    <Collapse 
-                        title = {aboutItem.title}
-                        content = {aboutItem.content}
-                    />
-                </div>
-            )}
+            <div className="collapse-container">
+                {aboutList.map((aboutItem) => 
+                    <div key ={aboutItem.id}>
+                        <Collapse 
+                            title = {aboutItem.title}
+                            content = {aboutItem.content}
+                        />
+                    </div>
+                )}
+            </div>
             <Footer />
         </div>
     )

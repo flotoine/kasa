@@ -1,35 +1,61 @@
 // Collapse rules 
-@keyframes slideOpen {
-    from {max-height: 0;}
-    to {max-height: 150px;}
+
+@keyframes slideOpen2 {
+    from {
+        transform:translateY(-50%);
+        max-height: 0px;
+        opacity: 0;
+    }
+    to {
+        max-height: 300px;
+        opacity: 1;
+        }
 }
 
-@keyframes slideClose {
-    from {max-height: 150px;}
-    to {max-height: 0px;}
+@keyframes slideClose2 {
+    from {
+        max-height: 300px;
+        opacity: 1;  
+    }
+    to {
+        transform:translateY(-50%);
+        opacity: 0;
+        max-height: 0px;
+    }
+}
+  
+
+.collapse-container {
+    margin-top: 10px;
 }
 
 .collapseWrapper {
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
     display: flex;
     flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    @media (max-width:600px) {
+        margin-left: 15px;
+        margin-right: 15px;
+        
+    }
 
     &__top {
-        width: 100%;
         background-color: #EF6159;
         color:white;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-radius: 2px;
-        padding-left: 1%;
-        padding-right: 1%;
+        z-index: 1;
+        border-radius: 5px;
+        padding-left: 3%;
+        padding-right: 3%;
         height:30px;
         animation-fill-mode: forwards;
+    
 
         &__arrow {
             height:50%;
@@ -44,23 +70,35 @@
     }
 
     &__textContainer {
-        width: 100%;
-        padding-left: 1%;
-        padding-right: 1%;
+        padding-left: 3%;
+        padding-right: 3%;
         background-color: #FAFAFA;
-        height:0;
-        overflow: hidden;  /// faire glisser le texte aussi
+        height:0px;
+        overflow: hidden;  /// faire glisser le texte aussi --> problème de scroll
+
+
+        border-radius: 0px 0px 5px 5px;
+        position:relative;
+        bottom:10px;
+        
+
+        & > * {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;}
 
         &--closed {
-            animation: slideClose 1s ease-in-out;
+            animation: slideClose2 1s ease-in-out;
             animation-fill-mode: forwards;
             height:auto;
         }
 
         &--open {
-            animation: slideOpen 1s ease-in-out;
+            animation: slideOpen2 1s ease-in-out;
             animation-fill-mode: forwards;
             height:auto;
+
         }
     }
 }
