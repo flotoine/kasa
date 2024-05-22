@@ -1,9 +1,14 @@
 .tags {
     display: flex;
     gap:10px;
+    
     &__items {
-        background-color: red;
+        background-color:#EF6159;
         color:white;
+        border-radius: 5px;
+        padding:1px 4px 1px 4px;
+        font-size: small;
+        font-weight: 500;
     }
 }
 

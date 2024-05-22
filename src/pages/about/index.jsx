@@ -4,6 +4,8 @@ import Banner from "../../components/Banner"
 import Collapse from "../../components/Collapse"
 import aboutList from "../../database/about.json"
 
+import './about.scss'
+
 export default function About () {
     return (
         <div className="pageContainer">

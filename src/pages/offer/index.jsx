@@ -26,37 +26,35 @@ export default function Offer () {
                                 </div>
                                 <div className="offer__info"> 
                                     <h1 className="offer__info__title">{ad.title}</h1>
-                                    <p>{ad.location}</p>
+                                    <p className="offer__info__location">{ad.location}</p>
                                     
-                                    <div className="offer__info__hostname">{ad.host.name}</div>
-                                    <div className="offer__info__hostpic">
-                                        <img src={ad.host.picture} alt ="propriétaire"/>
+                                    <div className="offer__info__host">
+                                        <div className="offer__info__host__name">{ad.host.name}</div>
+                                        <div className="offer__info__host__pic">
+                                            <img src={ad.host.picture} alt ="propriétaire"/>
+                                        </div>
                                     </div>
-                                    <div>
+                                    <div className="offer__info__stars">
                                         <StarRating 
                                             rating = {ad.rating}
                                         />
                                     </div>
                                     
-                                    <div>
+                                    <div className="offer__info__tags">
                                         <Tags
                                             tags = {ad.tags}
                                         />
                                     </div>
                                 </div>
                                 <div className="offer__collapses">
-                                    <div>
-                                        <Collapse 
-                                            title = "Description"
-                                            content = {ad.description}
-                                        />
-                                    </div>
-                                    <div>
-                                        <Collapse 
-                                            title = "Équipements"
-                                            content = {ad.equipments}
-                                        />
-                                    </div>
+                                    <Collapse 
+                                        title = "Description"
+                                        content = {ad.description}
+                                    />
+                                    <Collapse 
+                                        title = "Équipements"
+                                        content = {ad.equipments.map((equipment) => (<div>{equipment}</div>))}
+                                    />
                                 </div>
                     </div>
                     :null))

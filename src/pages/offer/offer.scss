@@ -6,26 +6,107 @@
         margin-right: 15px;
     }
     &__info {
+        margin-top:10px;
+        margin-bottom:10px;
+        display:grid;
+        grid-template:
+            "a a c c" auto
+            "b b c c" auto
+            "f f e e" auto;
+
+            @media (max-width:600px) {
+                grid-template:
+                    "a a" auto
+                    "b b" auto
+                    "f f" auto
+                    "e c" auto
+            }
+
+
+        & > * {
+            margin:0;
+        }
 
         &__title {
             color:#EF6159;
             font-weight:400;
-        }
-
-        &__hostname {
-            color:#EF6159;
-        }
-
-        &__hostpic {
-            height:100px;
-            width:100px;
-            border-radius: 100%;
+            grid-area: a;
+            font-size: calc(3vw + 3px);
             overflow: hidden;
-            
-            img {
-               width: 100%;              
+            width: 80%;
+            @media (max-width:600px) {
+                width: 100%;
             }
         }
+
+        &__location {
+            grid-area:b;
+        }
+
+        &__host {
+            grid-area: c;
+            display: flex;
+            justify-content: flex-end;
+            height: 50px;
+          
+            &__name {
+                color:#EF6159;
+                
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                text-align: end;
+                width:4px;
+                margin-right: 10px;
+            }
     
+            &__pic {
+                height:50px;
+                width:50px;
+                border-radius: 100%;
+                overflow: hidden;
+                
+                img {
+                   width: 100%;              
+                }
+            }
+        }
+        
+
+        &__stars {
+            grid-area:e;
+            display: flex;
+            justify-content: flex-end;
+            @media (max-width:600px) {
+                justify-content: flex-start;
+            }
+            
+        }
+
+        &__tags {
+            grid-area:f;
+            margin-top:15px;
+        }
+    }
+    &__collapses {
+        display: flex;
+        gap: 40px;
+        @media (max-width:600px) {
+            flex-direction: column;
+            gap:5px;
+        }
+        
+    }
+}
+
+.collapseWrapper {
+    flex-basis:100%;
+    margin-left:0;
+    margin-right:0;
+}
+
+.star {
+    @media (min-width:601px) {
+        justify-content: flex-end;
     }
 }
