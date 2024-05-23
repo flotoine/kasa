@@ -1,6 +1,6 @@
 import left from "../../assets/chevron-left-solid.svg"
 import right from "../../assets/chevron-right-solid.svg"
-import "./Slideshow.scss"
+import "./Gallery.scss"
 
 function NextSlide () {
     let currentSlide = document.querySelector(".slideshow-container__picture--displayed")

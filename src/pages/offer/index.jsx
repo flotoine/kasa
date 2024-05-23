@@ -3,7 +3,7 @@ import adList from "../../database/logements.json"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import Collapse from "../../components/Collapse";
-import Slideshow from "../../components/Slideshow";
+import Gallery from "../../components/Gallery";
 import StarRating from "../../components/StarRating";
 import Tags from "../../components/Tags";
 
@@ -20,7 +20,7 @@ export default function Offer () {
                 adList.map((ad) => (ad.id === offerId ? 
                     <div key={ad.id} className="offer">
                                 <div>
-                                    <Slideshow
+                                    <Gallery
                                         pictures = {ad.pictures}
                                     />
                                 </div>
@@ -47,13 +47,13 @@ export default function Offer () {
                                     </div>
                                 </div>
                                 <div className="offer__collapses">
-                                    <Collapse 
+                                    <Collapse key={ad.id}
                                         title = "Description"
                                         content = {ad.description}
                                     />
                                     <Collapse 
                                         title = "Équipements"
-                                        content = {ad.equipments.map((equipment) => (<div>{equipment}</div>))}
+                                        content = {ad.equipments.map((equipment) => (<div key={`collapse-${equipment}`}>{equipment}</div>))}
                                     />
                                 </div>
                     </div>

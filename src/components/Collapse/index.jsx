@@ -24,7 +24,7 @@ export default function Collapse ({title, content}) {
                     <img onClick={toggleDrawer} id={`collapseWrapper__top__arrow${title}`} className="collapseWrapper__top__arrow collapseWrapper__top__arrow--closed" src={unrollArrow} alt="bouton dérouler" />
                 </div>
                 <div id={`collapseWrapper__textContainer${title}`} className="collapseWrapper__textContainer">
-                <p>{content}</p>
+                <div>{content}</div>
                 </div>
             </div>
     )
