@@ -1,15 +1,11 @@
 import { 
   Link,
-  useRouteError
  } from "react-router-dom";
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import './error-page.scss';
 
 export default function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
-
   return (
     <div className="pageContainer">
       <Header />
